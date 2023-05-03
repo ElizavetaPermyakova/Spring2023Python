@@ -119,6 +119,7 @@ def generate_sudoku(N: int) -> tp.List[tp.List[str]]:
     """Генерация судоку заполненного на N элементов"""
     a = [['.' for n in range(0, 9)] for m in range(0, 9)]
     b = solve(a)
+
     while (N < 81):
         i = random.randint(0, 8)
         j = random.randint(0, 8)
