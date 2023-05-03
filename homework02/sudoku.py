@@ -96,8 +96,8 @@ def solve(grid: tp.List[tp.List[str]]) -> tp.Optional[tp.List[tp.List[str]]]:
     i = find_empty_positions(grid)[0]
     j = find_empty_positions(grid)[1]
 
-    for val in find_possible_values(grid, find_empty_positions(grid)):
-        grid[i][j] = val
+    for a in find_possible_values(grid, find_empty_positions(grid)):
+        grid[i][j] = a
         if solve(grid):
             return solve(grid)
 
@@ -119,7 +119,7 @@ def generate_sudoku(N: int) -> tp.List[tp.List[str]]:
     """Генерация судоку заполненного на N элементов"""
     a = [['.' for n in range(0, 9)] for m in range(0, 9)]
     b = solve(a)
-    while N < 81:
+    while (N < 81):
         i = random.randint(0, 8)
         j = random.randint(0, 8)
         if b[i][j] != '.':
