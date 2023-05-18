@@ -18,7 +18,7 @@ $ isort caesar.py vigenere.py rsa.py
 $ mypy caesar.py vigenere.py rsa.py
 ```
 
-Запустить доктесты можно так b:
+Запустить доктесты можно так:
 
 ```sh
 $ python -m doctest caesar.py

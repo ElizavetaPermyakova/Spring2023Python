@@ -51,4 +51,3 @@ class CaesarTestCase(unittest.TestCase):
             caesar.decrypt_caesar(ciphertext, shift=shift),
             msg=f"shift={shift}, ciphertext={ciphertext}",
         )
-""
