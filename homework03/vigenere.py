@@ -15,10 +15,10 @@ def encrypt_vigenere(plaintext: str, keyword: str) -> str:
             ciphertext += plaintext[i]
             continue
         if ord(plaintext[i]) + ord(keyword[i]) % 97 <= limit:
-            letter = chr(ord(plaintext[i]) + ord(keyword[i]) % 97)
+            symbol = chr(ord(plaintext[i]) + ord(keyword[i]) % 97)
         else:
-            letter = chr((ord(plaintext[i]) + ord(keyword[i]) % 97) - 26)
-        ciphertext += letter
+            symbol = chr((ord(plaintext[i]) + ord(keyword[i]) % 97) - 26)
+        ciphertext += symbol
     return ciphertext
 
 
@@ -39,8 +39,8 @@ def decrypt_vigenere(ciphertext: str, keyword: str) -> str:
             plaintext += ciphertext[i]
             continue
         if ord(ciphertext[i]) - ord(keyword[i]) % 97 >= limit:
-            letter = chr(ord(ciphertext[i]) - ord(keyword[i]) % 97)
+            symbol = chr(ord(ciphertext[i]) - ord(keyword[i]) % 97)
         else:
-            letter = chr((ord(ciphertext[i]) - ord(keyword[i]) % 97) + 26)
-        plaintext += letter
+            symbol = chr((ord(ciphertext[i]) - ord(keyword[i]) % 97) + 26)
+        plaintext += symbol
     return plaintext
