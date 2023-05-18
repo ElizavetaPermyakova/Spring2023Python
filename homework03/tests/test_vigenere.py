@@ -40,3 +40,4 @@ class VigenereTestCase(unittest.TestCase):
         plaintext = ''.join(random.choice(string.ascii_letters + ' -,') for _ in range(64))
         ciphertext = vigenere.encrypt_vigenere(plaintext, keyword)
         self.assertEqual(plaintext, vigenere.decrypt_vigenere(ciphertext, keyword))
+""
